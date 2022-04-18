@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../home/divinity/Documents/Projects/MyProjects/nodejs/serverless-functions/serverless-functions-starter/functions/1-hello.ts"],
+  "sourceRoot": "/tmp/tmp-15646-U2JwgELzDfRK",
+  "sourcesContent": ["import { Handler } from '@netlify/functions';\n\n// const person = { name: 'kmi' };\n\n// returns promise\nconst handler: Handler = async (event, context, cb) => {\n  return {\n    statusCode: 200,\n    // must be string\n    body: 'Our First Netlify Function Example',\n    // body: JSON.stringify(person),\n  };\n};\n// domain/.netlify/functions/1-hello\n// const handler: Handler = (event, context, cb) => {\n//   cb(null, { statusCode: 200, body: 'Our First Netlify Function Example' });\n// };\n\nexport { handler };\n"],
+  "mappings": ";;;;;;;;;AAAA;AAAA;AAAA;AAKA,IAAM,UAAmB,OAAO,OAAO,SAAS,OAAO;AACrD,SAAO;AAAA,IACL,YAAY;AAAA,IAEZ,MAAM;AAAA;AAAA;",
+  "names": []
+}

@@ -7,24 +7,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-// const { AxiosError } = require('axios');
-const result = document.getElementsByClassName('result');
-// const fetchDate = async () => {
-//   try {
-//     const data = await axios.get('/.netlify/functions/1-hello');
-//     console.log(data);
-//   } catch (err) {
-//     const error = err as Error | AxiosError;
-//     if (axios.isAxiosError(error)) {
-//       console.error(error.response);
-//     } else {
-//       console.error(error);
-//     }
-//   }
-// };
-const fetchDate = () => __awaiter(void 0, void 0, void 0, function* () {
-    console.log('test');
+// const person = { name: 'kmi' };
+// returns promise
+const handler = (event, context, cb) => __awaiter(void 0, void 0, void 0, function* () {
+    return {
+        statusCode: 200,
+        // must be string
+        body: 'Our First Netlify Function Example',
+        // body: JSON.stringify(person),
+    };
 });
-fetchDate();
-exports.module = fetchDate;
-export {};
+// domain/.netlify/functions/1-hello
+// const handler: Handler = (event, context, cb) => {
+//   cb(null, { statusCode: 200, body: 'Our First Netlify Function Example' });
+// };
+export { handler };

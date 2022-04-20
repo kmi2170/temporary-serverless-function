@@ -7,11 +7,7 @@ const handler: Handler = async (event, context, cb) => {
   return {
     statusCode: 200,
     // must be string
-<<<<<<< HEAD
-    body: 'Our First Netlify Function Example',
-=======
     body: 'Our First Netlify Function',
->>>>>>> 83d3aecf9d2306ed278c000397ae610e0b537671
     // body: JSON.stringify(person),
   };
 };

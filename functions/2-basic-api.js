@@ -8,14 +8,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 // @ts-ignore
-import * as items from '../assets/data';
+import items from '../assets/data';
 // const items = require('../assets/data');
-console.log(items);
 const handler = (event, context, cb) => __awaiter(void 0, void 0, void 0, function* () {
     return {
         statusCode: 200,
-        // body: JSON.stringify(items),
-        body: 'Our Basic API Example',
+        body: JSON.stringify(items),
+        // body: 'Our Basic API Example',
     };
 });
 export { handler };

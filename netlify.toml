@@ -1,2 +1,10 @@
 [build]
 functions = './functions'
+<<<<<<< HEAD
+=======
+
+[[redirects]]
+from = '/api/*'
+to = '/.netlify/functions/:splat'
+statu = 200
+>>>>>>> 83d3aecf9d2306ed278c000397ae610e0b537671

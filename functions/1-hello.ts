@@ -5,6 +5,7 @@ import { Handler } from '@netlify/functions';
 // returns promise
 const handler: Handler = async (event, context, cb) => {
   return {
+    headers: { 'Access-Control-Allow-Origin': '*' },
     statusCode: 200,
     // must be string
     body: 'Our First Netlify Function',

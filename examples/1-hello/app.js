@@ -6,14 +6,11 @@ const fetchDate = async () => {
     // const { data } = await axios.get('/.netlify/functions/1-hello');
     const { data } = await axios.get('/api/1-hello'); // redirect to .netlify/functions/1-hello
     result.textContent = data;
-  } catch (err) {
-    const error = err;
+  } catch (error) {
     if (axios.isAxiosError(error)) {
       console.error(error.response);
     } else {
       console.error(error);
-      // console.error(error.data);
-      // result.textContent = data;
     }
   }
 };

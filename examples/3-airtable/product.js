@@ -5,9 +5,12 @@ const fetchProduct = async () => {
   try {
     // const id = '?id=1';
     const id = window.location.search;
+    // const {
+    //   data: { fields },
+    // } = await axios.get(`/api/3-product${id}`);
     const {
       data: { fields },
-    } = await axios.get(`/api/3-product${id}`);
+    } = await axios.get(`/api/3-z-complete${id}`);
     const { name, description, price, image } = fields;
 
     result.innerHTML = `

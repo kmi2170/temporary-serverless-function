@@ -25,8 +25,8 @@ const fetchDate = async () => {
     // result.innerHTML = `<h2>Success</h2>`;
     // console.log(data);
   } catch (error) {
-    if (axios.isAxiosError(error)) {
-      console.error(error.response);
+    if (error.response) {
+      console.error(error.response.data);
     } else {
       console.error(error);
     }

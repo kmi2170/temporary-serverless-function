@@ -18,8 +18,8 @@ const fetchProducts = async () => {
       .join('');
     result.innerHTML = products;
   } catch (error) {
-    if (axios.isAxiosError(error).isAxiosError(error)) {
-      console.error(error.message);
+    if (error.response) {
+      console.error(error.response.data);
     } else {
       console.error(error);
     }

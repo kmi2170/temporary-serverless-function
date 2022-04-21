@@ -22,11 +22,13 @@ const handler = (event, context, cb) => __awaiter(void 0, void 0, void 0, functi
             const product = yield airtable.retrieve(id);
             if (product.error) {
                 return {
+                    headers: { 'Access-Control-Allow-Origin': '*' },
                     statusCode: 404,
                     body: `No product with id: ${id}`,
                 };
             }
             return {
+                headers: { 'Access-Control-Allow-Origin': '*' },
                 statusCode: 200,
                 body: JSON.stringify(product),
             };
@@ -34,6 +36,7 @@ const handler = (event, context, cb) => __awaiter(void 0, void 0, void 0, functi
         catch (error) {
             console.error(error);
             return {
+                headers: { 'Access-Control-Allow-Origin': '*' },
                 statusCode: 500,
                 body: 'Server Error',
             };
@@ -48,6 +51,7 @@ const handler = (event, context, cb) => __awaiter(void 0, void 0, void 0, functi
             return { id, name, url, price };
         });
         return {
+            headers: { 'Access-Control-Allow-Origin': '*' },
             statusCode: 200,
             body: JSON.stringify(products),
         };
@@ -55,6 +59,7 @@ const handler = (event, context, cb) => __awaiter(void 0, void 0, void 0, functi
     catch (error) {
         console.error(error);
         return {
+            headers: { 'Access-Control-Allow-Origin': '*' },
             statusCode: 500,
             body: 'Server Error',
         };

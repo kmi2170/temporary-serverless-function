@@ -51,6 +51,7 @@ var data_default = items;
 // functions/2-basic-api.ts
 var handler = async (event, context, cb) => {
   return {
+    headers: { "Access-Control-Allow-Origin": "*" },
     statusCode: 200,
     body: JSON.stringify(data_default)
   };

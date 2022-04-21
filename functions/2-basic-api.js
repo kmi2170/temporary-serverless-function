@@ -12,6 +12,7 @@ import items from '../assets/data';
 // const items = require('../assets/data');
 const handler = (event, context, cb) => __awaiter(void 0, void 0, void 0, function* () {
     return {
+        headers: { 'Access-Control-Allow-Origin': '*' },
         statusCode: 200,
         body: JSON.stringify(items),
         // body: 'Our Basic API Example',

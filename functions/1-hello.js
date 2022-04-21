@@ -11,6 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 // returns promise
 const handler = (event, context, cb) => __awaiter(void 0, void 0, void 0, function* () {
     return {
+        headers: { 'Access-Control-Allow-Origin': '*' },
         statusCode: 200,
         // must be string
         body: 'Our First Netlify Function',

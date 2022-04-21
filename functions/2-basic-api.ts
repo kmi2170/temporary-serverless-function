@@ -5,6 +5,7 @@ import items from '../assets/data';
 
 const handler: Handler = async (event, context, cb) => {
   return {
+    headers: { 'Access-Control-Allow-Origin': '*' },
     statusCode: 200,
     body: JSON.stringify(items),
     // body: 'Our Basic API Example',
